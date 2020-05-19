@@ -8,6 +8,7 @@ services:
     container_name: teste_angular_pwa
     ports:
       - "4203:4203"
+      - "5000:5000"
     volumes:
       - ..:/app
     tty: true
