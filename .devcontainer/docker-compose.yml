@@ -1,0 +1,15 @@
+
+services:
+  nodedev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace
+      - nodedev_modules:/workspace/node_modules
+    ports:
+      - "42002:4200"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  nodedev_modules:
